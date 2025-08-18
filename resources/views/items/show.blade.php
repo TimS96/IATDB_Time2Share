@@ -127,6 +127,11 @@
     .btn-secondary:hover { background:#d1d5db; }
   </style>
 
+
+  <nav class="muted" style="margin-bottom:.5rem;">
+    <a href="{{ route('items.index') }}">← Terug naar overzicht</a>
+  </nav>
+
   <div class="card">
     <div class="item-layout">
       {{-- LEFT: details & actions --}}
