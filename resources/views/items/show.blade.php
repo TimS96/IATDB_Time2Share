@@ -218,16 +218,17 @@
             @if ($item->status === 'beschikbaar')
               <hr style="margin:1rem 0;">
               <h2 style="margin:0 0 .5rem;">Aanvragen</h2>
+              @php $today = now()->toDateString(); @endphp
               <form method="POST" action="{{ route('loans.store') }}" class="grid-2" style="gap:.6rem;">
                 @csrf
                 <input type="hidden" name="item_id" value="{{ $item->id }}">
                 <div>
                   <label for="start_date" class="muted">Van</label>
-                  <input type="date" id="start_date" name="start_date" class="control" required>
+                  <input type="date" min="{{ $today }}" value="{{ $today }}" id="start_date" name="start_date" class="control" required>
                 </div>
                 <div>
                   <label for="due_date" class="muted">Tot en met</label>
-                  <input type="date" id="due_date" name="due_date" class="control" required>
+                  <input type="date" min="{{ $today }}" value="{{ $today }}" id="start_date" name="start_date" class="control" required>
                 </div>
                 <div style="grid-column:1 / -1; display:flex; gap:.5rem; flex-wrap:wrap;">
                   <button class="btn-add" type="submit">Aanvraag versturen</button>
