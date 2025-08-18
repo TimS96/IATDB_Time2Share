@@ -28,6 +28,20 @@
       text-decoration:none;
     }
     .btn-danger:hover { background:#fecaca; }
+
+    /* Review box styling */
+    .review-body {
+      margin-top: .25rem;
+      padding: .35rem .5rem;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: .35rem;
+      max-height: 8rem;       /* limit height */
+      overflow-y: auto;       /* scroll if text is too long */
+      word-wrap: break-word;
+      font-size: .95rem;
+      line-height: 1.4;
+    }
   </style>
 
   <h1 style="margin-bottom:.5rem;">Profiel</h1>
@@ -120,7 +134,7 @@
                   <span class="muted">— door {{ $review->reviewer->name ?? 'Onbekend' }}</span>
                 </div>
                 @if($review->body)
-                  <div>{{ $review->body }}</div>
+                  <div class="review-body">{{ $review->body }}</div>
                 @endif
                 @if($review->loan && $review->loan->item)
                   <div class="muted">
