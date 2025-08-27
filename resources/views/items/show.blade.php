@@ -240,7 +240,7 @@
           @endif
         @endauth
       </div>
-
+ 
       {{-- RIGHT: media --}}
       <aside class="item-media">
         @php $item->loadMissing('images'); @endphp

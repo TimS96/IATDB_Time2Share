@@ -38,3 +38,4 @@ class Item extends Model
         return $this->hasMany(ItemImage::class);
     }
 }
+ 

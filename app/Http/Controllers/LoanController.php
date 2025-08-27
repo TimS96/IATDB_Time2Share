@@ -122,7 +122,7 @@ class LoanController extends Controller
                 return back()->with('status', 'Onbekende actie.');
         }
     }
-
+ 
     public function create() { abort(404); }
     public function show(Loan $loan) { abort(404); }
     public function edit(Loan $loan) { abort(404); }
